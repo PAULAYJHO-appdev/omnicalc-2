@@ -22,7 +22,15 @@ class ApplicationController < ActionController::Base
   end
 
   def multiply_form
-    
+    render({ :template => "calculation_templates/multiply_form.html.erb"})
+  end
 
+  def multiply_calculation
+    @mul1 = params.fetch("mul1").to_f
+    @mul2 = params.fetch("mul2").to_f
+    @mulans = @mul1 * @mul2
+    render({ :template => "calculation_templates/multiply_calculation.html.erb"})
+  end
 
+  
 end
