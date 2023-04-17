@@ -32,5 +32,14 @@ class ApplicationController < ActionController::Base
     render({ :template => "calculation_templates/multiply_calculation.html.erb"})
   end
 
-  
+  def division_form
+    render({ :template => "calculation_templates/division_form.html.erb"})
+  end
+
+  def division_calculation
+    @div1 = params.fetch("div1").to_f
+    @div2 = params.fetch("div2").to_f
+    @divans = @div1 / @div2
+    render({ :template => "calculation_templates/division_calculation.html.erb"})
+  end
 end

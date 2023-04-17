@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get("/multiply", { :controller => "application", :action => "multiply_form"})
 
   get("/wizard_multiply", { :controller => "application", :action => "multiply_calculation"})
+
+  get("/divide", { :controller => "application", :action => "division_form"})
+
+  get("/wizard_divide", { :controller => "application", :action => "division_calculation"})
 end
